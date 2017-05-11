@@ -6,6 +6,12 @@ Page({
     totalPrice:0,           // 总价，初始为0
     selectAllStatus:false    // 全选状态，默认全选
   },
+  onPullDownRefresh:function(){
+      setTimeout(function(){
+        wx.stopPullDownRefresh();
+      },1500)
+      console.log('刷新成功!');
+  },
   onShow() {
     this.setData({
       hasList: true,

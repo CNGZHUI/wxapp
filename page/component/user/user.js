@@ -7,6 +7,12 @@ Page({
     hasAddress:false,
     address:{}
   },
+  onPullDownRefresh:function(){
+      setTimeout(function(){
+        wx.stopPullDownRefresh();
+      },1500)
+      console.log('刷新成功!');
+  },
   onLoad(){
     var self = this;
     /**

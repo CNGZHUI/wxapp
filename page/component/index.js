@@ -3,12 +3,16 @@ Page({
     imgUrls: [
       '/image/b1.jpg',
       '/image/b2.jpg',
-      '/image/b3.jpg',
-      '/image/b4.jpg'
+      '/image/b3.jpg'
     ],
     indicatorDots: false,
     autoplay: false,
     interval: 3000,
     duration: 800,
-  }
+  },
+  onPullDownRefresh:function(){
+      setTimeout(function(){
+        wx.stopPullDownRefresh();
+      },1500)
+  },
 })
